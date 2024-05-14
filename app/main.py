@@ -47,20 +47,3 @@ class CarWashStation:
         self.count_of_ratings += 1
         self.average_rating = (total_rating + rating) / self.count_of_ratings
         self.average_rating = round(self.average_rating, 1)
-
-
-bmw = Car(3, 3, "BMW")
-audi = Car(4, 9, "Audi")
-mercedes = Car(7, 1, "Mercedes")
-
-wash_station = CarWashStation(6, 8, 3.9, 11)
-
-income = wash_station.serve_cars([bmw, audi, mercedes])
-print(income)
-
-wash_cost = wash_station.calculate_washing_price(Car(2, 1, "Ford"))
-print(wash_cost)
-
-wash_station.rate_service(5)
-print(wash_station.count_of_ratings)
-print(wash_station.average_rating)
